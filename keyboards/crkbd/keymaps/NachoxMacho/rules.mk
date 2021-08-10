@@ -1,5 +1,6 @@
 # This enable the RGB lights
-RGBLIGHT_ENABLE = yes
+RGBLIGHT_ENABLE = no
+RGB_MATRIX_ENABLE = yes
 # This is the bootloader to use which enables the reset keycode
 BOOTLOADER = atmel-dfu
 # This enables the media keys
