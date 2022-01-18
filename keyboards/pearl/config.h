@@ -25,6 +25,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MANUFACTURER Pearl Boards
 #define PRODUCT      Pearl
 
+// Typing settings
+#define TAPPING_TERM 200
+#define IGNORE_MOD_TAP_INTERRUPT
+#define PERMISSIVE_HOLD
+
 #define LED_NUM_LOCK_PIN D0
 #define LED_CAPS_LOCK_PIN D1
 #define LED_SCROLL_LOCK_PIN D6
