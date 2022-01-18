@@ -19,10 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include QMK_KEYBOARD_H
 #include <stdio.h>
 
-enum ckrbd_layers {
-  _HALMAK,
+enum crkbd_layers {
   _QWERTY,
-  _BEAKL,
   _SYM,
   _NUM,
   _NAV,
@@ -32,26 +30,12 @@ enum ckrbd_layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // CENTER HALMAK
-    [_HALMAK] = LAYOUT_split_3x6_3(
-        KC_ESC,       KC_W,         KC_L,         KC_R,         KC_B,         KC_COMMA,    KC_DOT,         KC_Q,         KC_U,         KC_D,         KC_J,       KC_EQL,
-        OSL(_FUN),       LGUI_T(KC_S), LALT_T(KC_H), LSFT_T(KC_N), LCTL_T(KC_T), KC_Z,        KC_G,         RCTL_T(KC_A), RSFT_T(KC_E), RALT_T(KC_O), RGUI_T(KC_I), KC_QUOT,
-        OSM(MOD_MEH),  KC_F,         KC_M,         KC_V,         KC_C, KC_SLASH,            KC_SCLN,         KC_P,         KC_X,      KC_K,       KC_Y,         KC_MINS,
-        LT(_SYM,KC_DEL), LT(_NUM,KC_BSPC),      LT(_NAV,KC_TAB),                                       LT(_NUM,KC_ENT), KC_SPC,       TO(_GAM)
-    ),
 
     [_QWERTY] = LAYOUT_split_3x6_3(
         KC_ESC,       KC_Q,         KC_W,         KC_E,         KC_R,         KC_T,     KC_Y,         KC_U,         KC_I,         KC_O,         KC_P,            KC_EQL,
         OSL(_FUN),       LGUI_T(KC_A), LALT_T(KC_S), LSFT_T(KC_D), LCTL_T(KC_F), KC_G,     KC_H,         RCTL_T(KC_J), RSFT_T(KC_K), RALT_T(KC_L), RGUI_T(KC_SCLN), KC_QUOT,
         OSM(MOD_MEH),  KC_Z,         KC_X,         KC_C,         KC_V,         KC_B,     KC_N,         KC_M,         KC_COMM,      KC_DOT,       KC_SLSH,         KC_MINS,
         LT(_SYM,KC_DEL), LT(_NUM,KC_BSPC),      LT(_NAV,KC_TAB),                                       LT(_NUM,KC_ENT), KC_SPC,       TG(_GAM)
-    ),
-
-    // BEAKL
-    [_BEAKL] = LAYOUT_split_3x6_3(
-        KC_ESC,       KC_Q,         KC_H,         KC_O,         KC_U,         KC_X,       KC_G,         KC_C,         KC_R,         KC_F,         KC_Z,            KC_EQL,
-        OSL(_FUN),       LGUI_T(KC_Y), LALT_T(KC_I), LSFT_T(KC_E), LCTL_T(KC_A), KC_DOT,     KC_D,         RCTL_T(KC_S), RSFT_T(KC_T), RALT_T(KC_N), RGUI_T(KC_B), KC_QUOT,
-        OSM(MOD_MEH),  KC_J,         KC_SLASH,         KC_COMMA,         KC_K, KC_B,       KC_W,         KC_M,         KC_L,      KC_P,       KC_V,         KC_MINS,
-        LT(_SYM,KC_DEL), LT(_NUM,KC_BSPC),      LT(_NAV,KC_TAB),                                       LT(_NUM,KC_ENT), KC_SPC,       TO(_GAM)
     ),
 
 
@@ -87,6 +71,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,       KC_F13,  KC_F14,  KC_F15,  KC_F16,  KC_F17,  KC_F18,
         _______, _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______, _______,
         KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,      KC_F19,  KC_F20,  KC_F21,  KC_F22,  KC_F23,  KC_F24,
-        _______,   _______,  _______,                             TO(_QWERTY), TO(_BEAKL), TO(_HALMAK)
+        _______,   _______,  _______,                             _______, _______, _______
     ),
 };
