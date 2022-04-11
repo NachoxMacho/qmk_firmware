@@ -34,16 +34,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_QWERTY] = LAYOUT_split_3x6_3(
         KC_ESC,       KC_Q,         KC_W,         KC_E,         KC_R,         KC_T,     KC_Y,         KC_U,         KC_I,         KC_O,         KC_P,            KC_EQL,
-        OSL(_FUN),       LGUI_T(KC_A), LALT_T(KC_S), LSFT_T(KC_D), LCTL_T(KC_F), KC_G,     KC_H,         RCTL_T(KC_J), RSFT_T(KC_K), RALT_T(KC_L), RGUI_T(KC_SCLN), KC_QUOT,
-        TG(_GAM2),  KC_Z,         KC_X,         KC_C,         KC_V,         KC_B,     KC_N,         KC_M,         KC_COMM,      KC_DOT,       KC_SLSH,         KC_MINS,
-        LT(_SYM,KC_DEL), LT(_NUM,KC_BSPC),      LT(_NAV,KC_TAB),                                       LT(_NUM,KC_ENT), KC_SPC,       TG(_GAM)
+        KC_LCBR,       LGUI_T(KC_A), LALT_T(KC_S), LSFT_T(KC_D), LCTL_T(KC_F), KC_G,     KC_H,         RCTL_T(KC_J), RSFT_T(KC_K), RALT_T(KC_L), RGUI_T(KC_SCLN), KC_QUOT,
+        KC_BSLS,  KC_Z,         KC_X,         KC_C,         KC_V,         KC_B,     KC_N,         KC_M,         KC_COMM,      KC_DOT,       KC_SLSH,         KC_MINS,
+        LT(_SYM,KC_DEL), LT(_FUN,KC_BSPC),      LT(_NAV,KC_TAB),                                       LT(_NUM,KC_ENT), KC_SPC,       KC_LPRN
     ),
-
 
     [_SYM] = LAYOUT_split_3x6_3(
         KC_GRV,  KC_PERC, KC_AT,   KC_HASH, KC_DLR,  KC_ASTR,       _______, _______, _______, _______, _______, _______,
-        KC_AMPR, KC_PIPE, KC_LPRN, KC_LBRC, KC_LCBR, KC_BSLS,       _______, _______, _______, _______, _______, _______,
-        KC_EXLM, KC_CIRC, KC_RPRN, KC_RBRC, KC_RCBR, KC_TILD,       _______, _______, _______, _______, _______, _______,
+        KC_AMPR, KC_PIPE, KC_LPRN, KC_LBRC, KC_LCBR, KC_BSLS,       TG(_GAM2), _______, _______, _______, _______, _______,
+        KC_EXLM, KC_CIRC, KC_RPRN, KC_RBRC, KC_RCBR, KC_TILD,       TG(_GAM), _______, _______, _______, _______, _______,
         _______, _______, _______,                                  _______, _______, _______
     ),
 
